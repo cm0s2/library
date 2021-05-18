@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Modal -->
+<div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Book</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="titleInput" placeholder="Title" required>
+                <label for="titleInput">Title</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="authorInput" placeholder="Author" required>
+                <label for="authorInput">Author</label>
+              </div>
+
+
+              <div class="row">
+                <div class="form-group col-md-9">
+                        <input type="number" id="numPagesInput" class="form-control" placeholder="Number of pages" required>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="readCheckbox">
+                        <label class="form-check-label" for="readCheckbox">Read</label>
+                    </div>
+                </div>
+              </div>
+
+              
+             
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBookModal" id="submitBookBtn">Add</button>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+            <div class="me-2"><span class="material-icons md-36 text-secondary">book</span></div>
+            <h1>Library</h1>
+            <button type="button" class="btn btn-primary ms-auto" data-bs-toggle="modal" data-bs-target="#addBookModal">Add Book</button>
+            </header>
+        </header>
+      
+        <main>      
+            <div class="container">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="container">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">The Hobbit</h5>
+                      <button type="button" class="btn-close" aria-label="Close"></button>
+                    </div>
+                      <h6 class="card-subtitle mb-2 text-muted">J.R.R. Tolkien</h6>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Read</label>
+                          </div>
+                        <small class="text-muted">233 pages</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+        </main>
+        <footer class="pt-5 my-5 text-muted border-top">
+          Footer information · © 2021
+        </footer>
+      </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
