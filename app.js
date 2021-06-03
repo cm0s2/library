@@ -1,12 +1,13 @@
-function Book(title, author, numPages, haveRead) {
-    this.title = title;
-    this.author = author;
-    this.numPages = numPages;
-    this.haveRead = haveRead;
-}
-
-Book.prototype.info = function () {
-    return `${this.title} by ${this.author}, ${this.numPages} pages, ${(this.haveRead) ? 'read' : 'not read yet'}`
+class Book {
+    constructor(title, author, numPages, haveRead) {
+        this.title = title;
+        this.author = author;
+        this.numPages = numPages;
+        this.haveRead = haveRead;
+    }
+    info() {
+        return `${this.title} by ${this.author}, ${this.numPages} pages, ${(this.haveRead) ? 'read' : 'not read yet'}`
+    }
 }
 
 
